@@ -4,6 +4,11 @@
   "description": "Listens on port 63342 to open a file in vscode",
   "version": "0.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avarayr/VSCode-IntelliJ-Compatible-File-Opener"
+  },
+  "publisher": "AvarayrM",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -21,7 +26,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "ci": "npm run lint && npm run test"
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
